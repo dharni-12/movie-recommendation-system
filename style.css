@@ -1,0 +1,104 @@
+body, html {
+    margin: 0;
+    font-family: Arial;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Background image */
+.bg {
+    background: url('https://wallpaperaccess.com/full/2703652.png') no-repeat center center/cover;
+    width: 100%;
+    min-height: 100%;
+}
+
+/* Dark overlay */
+.overlay {
+    background: rgba(0,0,0,0.7);
+    min-height: 100%;
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Search box */
+.search-box {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    width: 300px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: darkred;
+}
+
+/* Movie row (horizontal scroll) */
+.movie-row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 50px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;  /* ✅ centers the cards horizontally */
+    align-items: center;      /* ✅ centers the cards vertically */
+}
+
+/* Movie cards */
+.movie-card {
+    text-align: center;
+    flex: 0 0 auto;
+    min-width: 150px;
+}
+
+/* Movie images */
+.movie-card img {
+    width: 150px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.movie-card img:hover {
+    transform: scale(1.1);
+}
+
+/* Scrollbar styling */
+.movie-row::-webkit-scrollbar {
+    height: 8px;
+}
+
+.movie-row::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+/* Back button */
+.back {
+    color: white;
+    text-decoration: none;
+}
